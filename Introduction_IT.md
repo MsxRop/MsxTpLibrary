@@ -21,13 +21,13 @@ Dunque questa libreria nasce come dicevo per essere un esercizio di programmazio
 La libreria è composta dai seguenti moduli:
 
 
-   Modulo		  Ruolo		    Target
-Msx.inc			Fondamenta	“Qui nasce tutto”
-VDP.inc			Grafica		“Il mondo visivo dell’MSX”
-VRAM.inc		Memoria video	“Dove vive l’immagine”
-Sprites.inc		Sprite		“Il movimento”
-Games.inc		Input		“Il dialogo con l’utente”
-Generic.inc		Utilità		“Gli strumenti del mestiere”
+- Modulo		  Ruolo		    Target
+- Msx.inc			Fondamenta	“Qui nasce tutto”
+- VDP.inc			Grafica		“Il mondo visivo dell’MSX”
+- VRAM.inc		Memoria video	“Dove vive l’immagine”
+- Sprites.inc		Sprite		“Il movimento”
+- Games.inc		Input		“Il dialogo con l’utente”
+- Generic.inc		Utilità		“Gli strumenti del mestiere”
 
 
 
@@ -64,6 +64,9 @@ Un bel gruppo di amici attraverso cui ho ritrovato l’MSX e tutto ciò che gira
 
 # Kazuhiko Nishi 
 per aver “inventato” MSX e per aver partecipato con entusiasmo al Devcon di Pisa organizzato dalla nostra Associazione.
+
+# Arnaud de Klerk 
+per il suo incredibile lavoro di raccolta e conservazione di tutto il materiale MSX disponibile on line e per la sua generoa condivisione con tutta la comunità
 
 # Kari Lammassaari 
 dalle cui librerie ho preso ispirazione, spunto (e anche qualche porzione di codice, soprattutto “inline”)
