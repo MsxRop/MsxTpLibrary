@@ -14,7 +14,7 @@ At the time of writing, the library is still in beta status, but it already incl
 
 The compiler generates a bootable .DSK image containing MSXDOS.SYS, COMMAND.COM, the compiled executable and any additional files required by the application. Development can be performed comfortably through modern tools such as the msx-pascal-project-template environment for Visual Studio Code.
 
-# Why Turbo Pascal?
+Why Turbo Pascal?
 
 Why create a library for MSX programming using Turbo Pascal?
 
@@ -26,7 +26,7 @@ At the time object-oriented programming was only beginning to gain attention, an
 
 Even today Turbo Pascal remains an elegant language. Its simplicity encourages good programming practices while remaining remarkably productive.
 
-# Why an MSX Library in 2026?
+Why an MSX Library in 2026?
 
 The MSX belongs to another era.
 
