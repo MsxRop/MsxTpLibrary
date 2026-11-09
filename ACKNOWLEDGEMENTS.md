@@ -24,6 +24,13 @@ Without his original vision, none of this would exist.
 
 Thank you also for your enthusiastic participation in the Pisa DevCon organized by MSX Italia, proving once again that the MSX spirit is still alive.
 
+# Arnaud de Klerk
+for his outstanding work in collecting, preserving and making available an extraordinary amount of MSX-related documentation, software and historical materials.
+
+His dedication to safeguarding the history of the MSX platform and his generous willingness to share these resources with the entire community have made it possible for enthusiasts and developers around the world to continue learning, researching and creating for this remarkable system.
+
+His contribution to the preservation of MSX heritage is invaluable.
+
 # Kari Lammassaari
 
 Many thanks to Kari Lammassaari, whose libraries and programming work provided both inspiration and practical guidance during the development of this project.
