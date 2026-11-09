@@ -100,8 +100,8 @@ Computing has changed enormously over the years, but the pleasure of experimenti
 The Global MSX Community
 
 
-Finally, 
-#thank you to 
+And finally 
+# thank you to 
 every developer, document author, archivist, emulator author, hardware designer, translator, preservationist and enthusiast who has contributed to keeping the MSX scene alive throughout the years.
 
 The MSX is more than a computer.
