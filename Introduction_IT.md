@@ -21,12 +21,12 @@ Dunque questa libreria nasce come dicevo per essere un esercizio di programmazio
 La libreria è composta dai seguenti moduli:
 
 
-- Msx.inc - Fondamenta	- “Qui nasce tutto”
-- VDP.inc			Grafica		“Il mondo visivo dell’MSX”
-- VRAM.inc		Memoria video	“Dove vive l’immagine”
-- Sprites.inc		Sprite		“Il movimento”
-- Games.inc		Input		“Il dialogo con l’utente”
-- Generic.inc		Utilità		“Gli strumenti del mestiere”
+- Msx.inc
+- VDP.inc
+- VRAM.inc	
+- Sprites.inc		
+- Games.inc	
+- Generic.inc	
 
 
 
