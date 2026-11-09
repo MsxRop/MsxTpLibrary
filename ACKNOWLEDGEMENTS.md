@@ -18,7 +18,7 @@ Although we live in different parts of Italy, we share the same enthusiasm for a
 
 # Mr Kazuhiko Nishi
 
-My deepest respect and gratitude to Kazuhiko Nishi, creator of the MSX standard.
+My deepest respect and gratitude to Mr Kazuhiko Nishi, creator of the MSX standard.
 
 Without his original vision, none of this would exist.
 
