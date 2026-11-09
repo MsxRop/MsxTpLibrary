@@ -10,7 +10,7 @@ The project was originally created as a programming exercise and gradually evolv
 
 Current release: Beta 1.0
 
-#Features
+# Features
 
 #Graphics
 Screen mode management
@@ -19,32 +19,32 @@ Lines and rectangles
 Color handling
 MSX2 palette support
 
-#VRAM
+# VRAM
 VRAM read/write routines
 RAM ↔ VRAM transfer functions
 VRAM addressing utilities
 High-speed VDP command support
 
-#Sprites
+# Sprites
 Pattern definition
 Attribute management
 MSX1 and MSX2 sprite support
 Hardware and software collision detection
 Sprite movement routines
 
-#Input Devices
+# Input Devices
 Keyboard handling
 Joystick support
 Mouse support
 Cursor and trigger management
 
-#Utilities
+# Utilities
 Hexadecimal conversion
 Sound generation (Beep)
 BASIC command execution
 General-purpose helper routines
 
-#Library Modules
+# Library Modules
 Module	Description
 MSX.inc	Core definitions, BIOS entries, VDP registers, system variables
 VDP.inc	Graphics and screen management
@@ -53,14 +53,14 @@ Sprites.inc	Sprite management
 Games.inc	User input management
 Generic.inc	Utility functions
 
-#Requirements
+# Requirements
 MSX-DOS
 Turbo Pascal 3.01 for CP/M
 MSX2 or newer recommended
 
 The library has been primarily tested using OpenMSX configured as an MSX2 machine.
 
-#Project Status
+# Project Status
 
 ⚠️ This project is currently in Beta status.
 
@@ -73,7 +73,7 @@ Music support
 Additional VDP helpers
 Expanded game-development functions
 
-#Documentation
+# Documentation
 
 Complete documentation can be found in the /docs directory.
 
@@ -84,14 +84,14 @@ Introduction_IT.md
 Modules.md
 Reference Manual
 
-#Compatibility
+# Compatibility
 System	Status
 MSX1	Partial
 MSX2	Supported
 MSX2+	Supported
 MSX turbo R	Supported
 
-#Acknowledgements
+# Acknowledgements
 
 Special thanks to:
 
@@ -109,7 +109,7 @@ For complete acknowledgements see:
 
 ACKNOWLEDGEMENTS.md
 
-#License
+# License
 
 Released under the MIT License.
 
