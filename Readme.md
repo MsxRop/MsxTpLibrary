@@ -12,7 +12,7 @@ Current release: Beta 1.0
 
 # Features
 
-#Graphics
+# Graphics
 Screen mode management
 Pixel plotting
 Lines and rectangles
