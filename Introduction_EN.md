@@ -145,7 +145,7 @@ Whose libraries inspired many of the ideas behind this project, and from whose w
 
 # decocq-stuff/msx-pascal-project-template
 
-For providing a modern Turbo Pascal development workflow integrated with Visual Studio Code.
+For providing a modern Turbo Pascal development workflow integrated with Visual Studio Code. (avalaible here:  https://github.com/decocq-stuff/msx-pascal-project-template )
 
 # Edison Moraes
 
