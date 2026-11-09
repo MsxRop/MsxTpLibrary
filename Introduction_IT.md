@@ -21,8 +21,7 @@ Dunque questa libreria nasce come dicevo per essere un esercizio di programmazio
 La libreria è composta dai seguenti moduli:
 
 
-- Modulo		                     Ruolo		    Target
-- Msx.inc			Fondamenta	“Qui nasce tutto”
+- Msx.inc - Fondamenta	- “Qui nasce tutto”
 - VDP.inc			Grafica		“Il mondo visivo dell’MSX”
 - VRAM.inc		Memoria video	“Dove vive l’immagine”
 - Sprites.inc		Sprite		“Il movimento”
