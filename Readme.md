@@ -62,11 +62,11 @@ The library has been primarily tested using OpenMSX configured as an MSX2 machin
 
 # Project Status
 
-- ⚠️ This project is currently in Beta status.
+⚠️ This project is currently in Beta status.
 
-- The API may change as development continues and new modules are added.
+The API may change as development continues and new modules are added.
 
-- Planned future additions include:
+# Planned future additions include:
 
 - PSG sound library
 - Music support
