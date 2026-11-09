@@ -13,11 +13,11 @@ Current release: Beta 1.0
 # Features
 
 # Graphics
-Screen mode management
-Pixel plotting
-Lines and rectangles
-Color handling
-MSX2 palette support
+- Screen mode management
+- Pixel plotting
+- Lines and rectangles
+- Color handling
+- MSX2 palette support
 
 # VRAM
 VRAM read/write routines
