@@ -20,58 +20,58 @@ Current release: Beta 1.0
 - MSX2 palette support
 
 # VRAM
-VRAM read/write routines
-RAM ↔ VRAM transfer functions
-VRAM addressing utilities
-High-speed VDP command support
+- VRAM read/write routines
+- RAM ↔ VRAM transfer functions
+- VRAM addressing utilities
+- High-speed VDP command support
 
 # Sprites
-Pattern definition
-Attribute management
-MSX1 and MSX2 sprite support
-Hardware and software collision detection
-Sprite movement routines
+- Pattern definition
+- Attribute management
+- MSX1 and MSX2 sprite support
+- Hardware and software collision detection
+- Sprite movement routines
 
 # Input Devices
-Keyboard handling
-Joystick support
-Mouse support
-Cursor and trigger management
+- Keyboard handling
+- Joystick support
+- Mouse support
+- Cursor and trigger management
 
 # Utilities
-Hexadecimal conversion
-Sound generation (Beep)
-BASIC command execution
-General-purpose helper routines
+- Hexadecimal conversion
+- Sound generation (Beep)
+- BASIC command execution
+- General-purpose helper routines
 
 # Library Modules
-Module	Description
-MSX.inc	Core definitions, BIOS entries, VDP registers, system variables
-VDP.inc	Graphics and screen management
-VRAM.inc	Video memory manipulation
-Sprites.inc	Sprite management
-Games.inc	User input management
-Generic.inc	Utility functions
+# Module	Description
+- MSX.inc	Core definitions, BIOS entries, VDP registers, system variables
+- VDP.inc	Graphics and screen management
+- VRAM.inc	Video memory manipulation
+- Sprites.inc	Sprite management
+- Games.inc	User input management
+- Generic.inc	Utility functions
 
 # Requirements
-MSX-DOS
-Turbo Pascal 3.01 for CP/M
-MSX2 or newer recommended
+- MSX-DOS
+- Turbo Pascal 3.01 for CP/M
+- MSX2 or newer recommended
 
 The library has been primarily tested using OpenMSX configured as an MSX2 machine.
 
 # Project Status
 
-⚠️ This project is currently in Beta status.
+- ⚠️ This project is currently in Beta status.
 
-The API may change as development continues and new modules are added.
+- The API may change as development continues and new modules are added.
 
-Planned future additions include:
+- Planned future additions include:
 
-PSG sound library
-Music support
-Additional VDP helpers
-Expanded game-development functions
+- PSG sound library
+- Music support
+- Additional VDP helpers
+- Expanded game-development functions
 
 # Documentation
 
@@ -79,35 +79,35 @@ Complete documentation can be found in the /docs directory.
 
 Available documentation:
 
-Introduction_EN.md
-Introduction_IT.md
-Modules.md
-Reference Manual
+- Introduction_EN.md
+- Introduction_IT.md
+- Modules.md
+- Reference Manual
 
 # Compatibility
-System	Status
-MSX1	Partial
-MSX2	Supported
-MSX2+	Supported
-MSX turbo R	Supported
+- System	Status
+- MSX1	Partial
+- MSX2	Supported
+- MSX2+	Supported
+- MSX turbo R	Supported
 
 # Acknowledgements
 
 Special thanks to:
 
-MSX Italia
-Kazuhiko Nishi
-Kari Lammassaari
-Edison Moraes
-Ian Sinclair
-C. I. Barkinshaw
-R. Goodley
-Jacopo Castelfranchi Editore
-Contributors of MSX Pascal Project Template
+- MSX Italia
+- Kazuhiko Nishi
+- Kari Lammassaari
+- Edison Moraes
+- Ian Sinclair
+- C. I. Barkinshaw
+- R. Goodley
+- Jacopo Castelfranchi Editore
+- Contributors of MSX Pascal Project Template
 
 For complete acknowledgements see:
 
-ACKNOWLEDGEMENTS.md
+- ACKNOWLEDGEMENTS.md
 
 # License
 
