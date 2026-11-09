@@ -16,7 +16,7 @@ Through this community I rediscovered the MSX world, met passionate enthusiasts,
 
 Although we live in different parts of Italy, we share the same enthusiasm for a computer platform that continues to inspire creativity and innovation.
 
-# Mr Kazuhiko Nishi
+# Kazuhiko Nishi
 
 My deepest respect and gratitude to Mr Kazuhiko Nishi, creator of the MSX standard.
 
