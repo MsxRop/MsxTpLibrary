@@ -71,7 +71,7 @@ per il suo incredibile lavoro di raccolta e conservazione di tutto il materiale 
 dalle cui librerie ho preso ispirazione, spunto (e anche qualche porzione di codice, soprattutto “inline”)
 
 # decocq-stuff/msx-pascal-project-template 
-Template build environment for MSX Turbo Pascal with MS Visual Code IDE integration (e chiunque vi abbia lavorato e contribuito) il cui tool, msx-pascal-project-template, mi è stato di grande utilità nella messa a punto della libreria. Indispensabile per programmare in Turbo pascal comodamente attraverso Visual studio Code
+Template build environment for MSX Turbo Pascal with MS Visual Code IDE integration (e chiunque vi abbia lavorato e contribuito) il cui tool, msx-pascal-project-template, mi è stato di grande utilità nella messa a punto della libreria. Indispensabile per programmare in Turbo pascal comodamente attraverso Visual studio Code (disponibile qui:   https://github.com/decocq-stuff/msx-pascal-project-template  )
 
 # Edison Moraes 
 per il suo prezioso libro MSX Top Secret III, davvero una fonte inesauribile di informazioni utili e interessanti
