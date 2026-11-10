@@ -67,9 +67,8 @@ BEGIN
 END;
 
 
-
 {Draw pixel at X,Y using color}
-Procedure Psetx(x,y:integer;color:byte);
+Procedure Pset1(x,y:integer;color:byte);  {Msx1}
 
 BEGIN
   regBC:=x;
@@ -82,7 +81,7 @@ END;
 
 
 {Grab the color at X,Y}
-function Pointx(x,y:integer):byte;
+function Point1(x,y:integer):byte;        {Msx1}
 
 BEGIN
   regBC:=x;
@@ -90,68 +89,39 @@ BEGIN
   MsxBios(SCALXY);
   MsxBios(MAPXYC);
   MsxBios(READC);
-  Pointx:=RegA;
+  Point1:=RegA;
 END;
 
 
-{Draw a line from x1,y1 to x2,y2 using color and logical operator LogOp}
-procedure Lines(x1, y1, x2, y2: integer; color,logOp: byte);
+{Draw a line from x1,y1 to x2,y2 using color }
+procedure Lines1(x1, y1, x2, y2: integer; color:byte);  {Msx1}
 
-var mode: byte;
+
 BEGIN
-  mode := SCRMOD ;
-  if mode <= 4 then
-    begin
+
       regBC := x1;   
       regDE := y1;   
       GXPOS := x2 ;
       GYPOS := y2;
       ATRBYT := color;
       MsxBios(lidraw) ;
-    end
-  else
-    begin
-      GRPACX := 1;        
-      LOGOPR := LogOp;
-      regBC := x1;       
-      regDE := y1;         
-      GXPOS := x2;        
-      GYPOS := y2;
-      ATRBYT := color;
-      Msx2Bios(DOGRAPH);
-    end;
-END;
+ END;
 
 
-{Draw an empty box from x1,y1 to x2,y2 using color and logical operator LogOp}
-procedure DrawBox(x,y,x1,y1:integer;color,LogOp:byte);
+{Draw an empty box from x1,y1 to x2,y2 using color}
+procedure DrawBox1(x1,y1,x2,y2:integer;color:byte); {Msx1}
 
 BEGIN
-  regBC := x;      
-  regDE := y;      
-  GXPOS := x1;    
-  GYPOS := y1;     
-  ATRBYT := color;
-  LOGOPR := LogOp;     
-  Msx2Bios(NVBXLN);
+  Lines1(X1,Y1,X2,Y1,color);
+  Lines1(X2,Y1,X2,Y2,color);
+  Lines1(X2,Y2,X1,Y2,color);
+  Lines1(X1,Y2,X1,Y1,color);
 END;
 
 
 
-{Draw a box from x1,y1 to x2,y2 filled using color and logical operator LogOp}
-procedure FillBoxx(x,y,x1,y1:integer;color,LogOp:byte);
 
-BEGIN
-  regBC := x;
-  regDE := y;
-  GXPOS := x1;
-  GYPOS := y1;
-  ATRBYT := color;
-  LOGOPR := LogOp;
-  Msx2Bios(NVBXFL);
-END;
-
-procedure Circle(x, y, r: integer; col: byte);
+procedure Circle(x, y, r: integer; col: byte);  {Msx1 Msx2}
 var
   str255: string[255];
 BEGIN
@@ -168,7 +138,7 @@ END;
 
 
 {write a string (max 32 characters) in graphic mode at X,Y using color and logical operator LogOp}
-Procedure WriteG(x,y:integer; Chars:Str255; color, logic:byte);
+Procedure WriteG(x,y:integer; Chars:Str255; color, logic:byte); {Msx1 Msx2}
 Var k:    integer;
     mode: byte;
 
@@ -194,7 +164,7 @@ END;
 
 
 {Set graphic cursor at X,Y}
-procedure GoXY(x, y: integer);
+procedure GoXY(x, y: integer);      {Msx1 Msx2}
 BEGIN
   RegHL:= X+(Y*256);     
   MsxBios(POSIT);
@@ -203,7 +173,7 @@ END;
 
 
 {Set the ForeGround, BackGround  and Border colors}
-Procedure Color (ForeGround,BackGround,Border:byte);
+Procedure Color (ForeGround,BackGround,Border:byte);  {Msx1 Msx2}
 BEGIN
   FORCLR:=ForeGround;
   BAKCLR:=BackGround;
@@ -213,7 +183,7 @@ END;
 
 
 {Redefine the color pattern of one color setting the red green and blue, like COLOR=(COLOR,R,G,B) IN BASIC}
-Procedure SetRGB(Color,r,g,b:Byte);
+Procedure SetRGB(Color,r,g,b:Byte);  {Msx1 Msx2}
  Var rb,gr,colour :Byte;
  BEGIN
    rb := r*16+b;
@@ -228,18 +198,18 @@ Procedure SetRGB(Color,r,g,b:Byte);
 
 
 {Disables the screen presntation}
-Procedure HideScreen;
+Procedure HideScreen;         {Msx1 Msx2}
 BEGIN
   inline($FD/$2A/$C1/$FC/$DD/$21/$41/$00/$CD/$1C/$00);
 END;
 {Enables the screen presntation}
-Procedure ShowScreen;
+Procedure ShowScreen;         {Msx1 Msx2}
 BEGIN
   inline ($fd/$2a/$c1/$fc/$dd/$21/$44/$00/$cd/$1c/$00);
 END;
 
 {Load a file created with BSAVE"NOMEFILE",S in BAsic}
-procedure BLoadS(Filename : str12);
+procedure BLoadS(Filename : str12);       {Msx1 Msx2}
 var
   F               : file;
   Hdr             : array[0..6] of byte;
@@ -304,7 +274,7 @@ END;
 {copies from CPU to VRAM}
 Procedure MoveDotToVram(SourceAddress :Integer;Destination_x,
 Destination_y:Integer;DestinationPage:Byte;Number_x,Number_y:Integer;
-LogicalOperation,Direction:Byte);
+LogicalOperation,Direction:Byte);                                       {Msx2}
 
 Var 
   Address :Integer;
@@ -329,7 +299,7 @@ END ; {Lmmc}
 
 
 
-Procedure Riga(X1,Y1,X2,Y2 : Integer;Page,Colore,LogOp : Byte);
+Procedure Lines2(X1,Y1,X2,Y2 : Integer;Colore,page,LogOp : Byte);     {Msx2}
 
 Var
   DXA,DYA : Integer;
@@ -364,12 +334,7 @@ BEGIN
 
 END;
 
-Procedure fillBox(
-          X1,Y1,
-          X2,Y2 : Integer;
-          Page  : Byte;
-          Colore: Byte;
-          LogOp:  byte);
+Procedure fillBox(X1,Y1,X2,Y2 : Integer;colore,Page,LogOp:  byte);    {Msx2}
 
 Var
   TX : Integer;
@@ -408,28 +373,19 @@ Begin
 End;
 
 
-Procedure Box(
-          X1,Y1,
-          X2,Y2 : Integer;
-          Page  : Byte;
-          Colore: Byte;
-          LogOp : Byte);
+Procedure DrawBox2(X1,Y1,X2,Y2 : Integer;colore,page,LogOp : Byte);   {Msx2}
 
 Begin
-
-  Riga(X1,Y1,X2,Y1,Page,Colore,LogOp);
-  Riga(X2,Y1,X2,Y2,Page,Colore,LogOp);
-  Riga(X2,Y2,X1,Y2,Page,Colore,LogOp);
-  Riga(X1,Y2,X1,Y1,Page,Colore,LogOp);
+  
+  Lines2(X1,Y1,X2,Y1,colore,Page,LogOp);
+  Lines2(X2,Y1,X2,Y2,colore,Page,LogOp);
+  Lines2(X2,Y2,X1,Y2,colore,Page,LogOp);
+  Lines2(X1,Y2,X1,Y1,colore,Page,LogOp);
 
 End;
 
 
-Procedure Pset(
-          X1,Y1 : Integer;
-          Page  : Byte;
-          Colore: Byte;
-          LogOp : byte);
+Procedure Pset2(X1,Y1 : Integer;Page  : Byte; Colore: Byte;LogOp : byte); {Msx2}
 
 
 Begin
@@ -448,9 +404,7 @@ Begin
 End;
 
 
-Function Point(
-          X1,Y1 : Integer;
-          page  : byte): byte;
+Function Point2(X1,Y1 : Integer; page  : byte): byte;   {Msx2}
 
 
 Begin
@@ -463,10 +417,10 @@ Begin
 
   Common;
 
-  Point:=ReadVdpStateReg(7);;
+  Point2:=ReadVdpStateReg(7);;
 End;
 
-Procedure SCopy(X1,Y1,X2,Y2 : Integer;SrcPage : Byte;DestX,DestY : Integer;DestPage,LogOp : Byte);
+Procedure SCopy(X1,Y1,X2,Y2 : Integer;SrcPage : Byte;DestX,DestY : Integer;DestPage,LogOp : Byte);   {Msx2}
 
 BEGIN
   _sx := X1;
@@ -484,7 +438,7 @@ END;
 
 
 
-Procedure CopyToFile(X1,Y1,X2,Y2 : Integer; SrcPage : Byte; NomeFile :  str12);
+Procedure CopyToFile(X1,Y1,X2,Y2 : Integer; SrcPage : Byte; NomeFile :  str12);  {Msx2}
 type 
   nfc =string[15];
 var 
@@ -492,12 +446,12 @@ var
 
 
 BEGIN
-  paramstr:= '"'+ Nomefile + '"' + #0;  {nome del file da salvare eventualmente completo di indicazione del drive A: o B:}
-  _sx := X1;                        {coordinata X iniziale}
-  _sy := SrcPage * 256 + Y1;        {coordinata Y iniziale calcolando anche in che pagima si trova}
-  _dx :=addr(paramstr)+1;             {Punta al nome del file in formato BASIC quindi coi dopo apici e seguiro da 0}
-  _nx := X2 - X1 + 1;               {Calcola la larghezza}
-  _ny := Y2 - Y1 + 1;               {}
+  paramstr:= '"'+ Nomefile + '"' + #0;  {Filename to save, eventually complete with indication of drive A: or B:}
+  _sx := X1;                            {Start X coordinate}
+  _sy := SrcPage * 256 + Y1;            {Start Y coordinate}
+  _dx :=addr(paramstr)+1;               {Pointer to the filename in BASIC format, with quotes and null terminator}
+  _nx := X2 - X1 + 1;                   {Calculate the width}
+  _ny := Y2 - Y1 + 1;                   {Calculate the height}
   RegHL := $F562;
 
   Msx2Bios(BLTDV);
@@ -505,16 +459,16 @@ BEGIN
 END;
 
 
-Procedure CopyFromFile(X,Y: Integer; logOp : Byte; NomeFile :  str12);
+Procedure CopyFromFile(X,Y: Integer; logOp : Byte; NomeFile :  str12);    {Msx2}
 type nfc =string[15];
 var parstr: nfc;
 
 
 Begin
-parstr:= '"'+ Nomefile + '"' + #0;  {nome del file da salvare eventualmente completo di indicazione del drive A: o B:}
-  _sx :=addr(parstr)+1;             {Punta al nome del file in formato BASIC quindi coi dopo apici e seguiro da 0}
+parstr:= '"'+ Nomefile + '"' + #0;  {Filename to save, eventually complete with indication of drive A: or B:}
+  _sx :=addr(parstr)+1;             {Pointer to the filename in BASIC format, with quotes and null terminator}
   
-    _dx :=X ;           {Punta al nome del file in formato BASIC quindi coi dopo apici e seguiro da 0}
+    _dx :=X ;                       {Pointer to the destination coordinate}
   _dy:=Y;
 _cmd:=LogOp;
 
@@ -523,4 +477,59 @@ RegHL := $F562;
   Msx2Bios(BLTVD);
 
 End;
+
+{-------------------}
+{calling these procedures the user can use the same procedure name}
+{and the right one will be called depending on the current screen mode }
+{-------------------}
+
+procedure Pset(x,y:integer;color,page,logop:byte);    {call the right procedure depending on the screen mode}
+BEGIN
+if (scrmod < 3) then
+  begin
+  pset1(x,y,color);
+  end
+else
+  begin 
+  pset2(x,y,page,color,logop);
+  end;
+END;
+
+function Point(x,y:integer;page:byte):byte; {call the right procedure depending on the screen mode}
+BEGIN
+if (scrmod < 3) then
+  begin
+  point:=point1(x,y);
+  end
+else
+  begin 
+  point:=point2(x,y,page);
+  end;
+END;
+
+procedure Lines(x1,y1,x2,y2:integer;color,page,logop:byte); {call the right procedure depending on the screen mode}
+
+BEGIN
+if (scrmod < 3) then
+  begin
+  lines1(x1,y1,x2,y2,color);
+  end
+else
+  begin 
+  lines2(x1,y1,x2,y2,color,page,logop);
+  end;
+END;
+
+procedure DrawBox(x1,y1,x2,y2:integer;color,page,logop:byte);   {call the right procedure depending on the screen mode}
+BEGIN
+if (scrmod < 3) then
+  begin
+  drawbox1(x1,y1,x2,y2,color);
+  end
+else
+  begin 
+  drawbox2(x1,y1,x2,y2,color,page,logop);
+  end;
+END;  
+
 
